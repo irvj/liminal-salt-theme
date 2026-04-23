@@ -46,6 +46,27 @@ local dark = {
 
   -- LSP signature
   LspSignatureActiveParameter = { bg = p.sageTint30, bold = true },
+
+  -- LSP semantic tokens (override treesitter when the server provides them)
+  ["@lsp.type.class"]         = { link = "@type" },
+  ["@lsp.type.decorator"]     = { link = "@attribute" },
+  ["@lsp.type.enum"]          = { link = "@type" },
+  ["@lsp.type.enumMember"]    = { link = "@constant" },
+  ["@lsp.type.function"]      = { link = "@function" },
+  ["@lsp.type.interface"]     = { link = "@type" },
+  ["@lsp.type.macro"]         = { link = "@constant.macro" },
+  ["@lsp.type.method"]        = { link = "@method" },
+  ["@lsp.type.namespace"]     = { link = "@namespace" },
+  ["@lsp.type.parameter"]     = { link = "@variable" },
+  ["@lsp.type.property"]      = { link = "@property" },
+  ["@lsp.type.struct"]        = { link = "@type" },
+  ["@lsp.type.type"]          = { link = "@type" },
+  ["@lsp.type.typeParameter"] = { link = "@type" },
+  ["@lsp.type.variable"]      = { link = "@variable" },
+  ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+  ["@lsp.typemod.method.defaultLibrary"]   = { link = "@function.builtin" },
+  ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+  ["@lsp.typemod.variable.readonly"]       = { link = "@constant" },
 }
 
 local light = {
@@ -91,6 +112,27 @@ local light = {
 
   -- LSP signature
   LspSignatureActiveParameter = { bg = p.sageTint30L, bold = true },
+
+  -- LSP semantic tokens (override treesitter when the server provides them)
+  ["@lsp.type.class"]         = { link = "@type" },
+  ["@lsp.type.decorator"]     = { link = "@attribute" },
+  ["@lsp.type.enum"]          = { link = "@type" },
+  ["@lsp.type.enumMember"]    = { link = "@constant" },
+  ["@lsp.type.function"]      = { link = "@function" },
+  ["@lsp.type.interface"]     = { link = "@type" },
+  ["@lsp.type.macro"]         = { link = "@constant.macro" },
+  ["@lsp.type.method"]        = { link = "@method" },
+  ["@lsp.type.namespace"]     = { link = "@namespace" },
+  ["@lsp.type.parameter"]     = { link = "@variable" },
+  ["@lsp.type.property"]      = { link = "@property" },
+  ["@lsp.type.struct"]        = { link = "@type" },
+  ["@lsp.type.type"]          = { link = "@type" },
+  ["@lsp.type.typeParameter"] = { link = "@type" },
+  ["@lsp.type.variable"]      = { link = "@variable" },
+  ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+  ["@lsp.typemod.method.defaultLibrary"]   = { link = "@function.builtin" },
+  ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+  ["@lsp.typemod.variable.readonly"]       = { link = "@constant" },
 }
 
 function M.highlights(mode)
