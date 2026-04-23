@@ -24,3 +24,7 @@ $RECYCLE.BIN/
 .directory
 .Trash-*
 .nfs*
+
+# Build artifacts
+dist/*.vsix
+node_modules/

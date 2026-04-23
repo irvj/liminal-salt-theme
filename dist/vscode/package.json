@@ -1,0 +1,49 @@
+{
+	"name": "liminal-salt",
+	"displayName": "Liminal Salt",
+	"description": "An earthy, accessible color theme — beige, sage, and stone tones. Dark and light variants, WCAG 2.1 AA throughout.",
+	"version": "1.0.0",
+	"publisher": "",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"theme",
+		"color-theme",
+		"dark",
+		"light",
+		"earthy",
+		"neutral",
+		"sage",
+		"beige",
+		"accessible",
+		"wcag"
+	],
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#1a1c1b",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/irvj/liminal-salt-theme.git"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Liminal Salt Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/liminal-salt-dark-color-theme.json"
+			},
+			{
+				"label": "Liminal Salt Light",
+				"uiTheme": "vs",
+				"path": "./themes/liminal-salt-light-color-theme.json"
+			}
+		]
+	}
+}

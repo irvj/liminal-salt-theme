@@ -78,7 +78,7 @@ Grab the file for your tool and follow the install instructions below.
 
 | Editor | Dark | Light |
 |--------|------|-------|
-| VS Code | [liminal-salt-dark.json](dist/vscode/liminal-salt-dark.json) | [liminal-salt-light.json](dist/vscode/liminal-salt-light.json) |
+| VS Code | [extension package](dist/vscode/) (both variants) | |
 | Zed | [liminal-salt.json](dist/zed/liminal-salt.json) (both variants) | |
 | Neovim | [Lua plugin](dist/vim/) (dark + light) | |
 | JetBrains | [Liminal Salt Dark.icls](dist/jetbrains/Liminal%20Salt%20Dark.icls) | [Liminal Salt Light.icls](dist/jetbrains/Liminal%20Salt%20Light.icls) |
@@ -100,7 +100,14 @@ Grab the file for your tool and follow the install instructions below.
 
 ## Install
 
-**VS Code** — Copy the JSON into `.vscode/extensions/` or use the theme file with a custom extension.
+**VS Code** — Install from the Marketplace once published, or install a local build:
+
+```sh
+npm run package:vscode                               # writes dist/liminal-salt-<version>.vsix
+code --install-extension dist/liminal-salt-1.0.0.vsix
+```
+
+Then pick **Liminal Salt Dark** or **Liminal Salt Light** from Preferences → Color Theme. The `dist/vscode/` directory is itself a complete extension (manifest, themes, icon) — packaging just zips it into a `.vsix`.
 
 **Zed** — Copy `liminal-salt.json` to `~/.config/zed/themes/` and select from the theme picker.
 
