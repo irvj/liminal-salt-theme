@@ -26,5 +26,4 @@ $RECYCLE.BIN/
 .nfs*
 
 # Build artifacts
-dist/*.vsix
 node_modules/
