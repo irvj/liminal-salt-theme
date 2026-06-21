@@ -103,8 +103,8 @@ Grab the file for your tool and follow the install instructions below.
 **VS Code** — Install from the Marketplace once published, or install a local build:
 
 ```sh
-npm run package:vscode                               # writes dist/liminal-salt-<version>.vsix
-code --install-extension dist/liminal-salt-1.0.0.vsix
+npm run package:vscode                               # writes dist/vscode/liminal-salt-<version>.vsix
+code --install-extension dist/vscode/liminal-salt-1.0.0.vsix
 ```
 
 Then pick **Liminal Salt Dark** or **Liminal Salt Light** from Preferences → Color Theme. The `dist/vscode/` directory is itself a complete extension (manifest, themes, icon) — packaging just zips it into a `.vsix`.

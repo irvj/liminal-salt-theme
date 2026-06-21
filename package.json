@@ -14,7 +14,7 @@
     "build:tmux": "node src/build.js tmux",
     "build:wezterm": "node src/build.js wezterm",
     "build:jetbrains": "node src/build.js jetbrains",
-    "package:vscode": "npm run build:vscode && cd dist/vscode && npx --yes @vscode/vsce package --out ../"
+    "package:vscode": "npm run build:vscode && cd dist/vscode && npx --yes @vscode/vsce package"
   },
   "license": "MIT"
 }
