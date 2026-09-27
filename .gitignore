@@ -27,3 +27,4 @@ $RECYCLE.BIN/
 
 # Build artifacts
 node_modules/
+*.vsix
