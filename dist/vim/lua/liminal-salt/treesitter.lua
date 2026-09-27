@@ -64,7 +64,7 @@ local dark = {
   ["@module"]                = { fg = p.teal500 },
   ["@symbol"]                = { fg = p.sage400 },
 
-  -- Text / markup
+  -- Text / markup (@text.* captures, before Neovim 0.10)
   ["@text"]                  = { fg = p.beige300 },
   ["@text.strong"]           = { bold = true },
   ["@text.emphasis"]         = { italic = true },
@@ -85,7 +85,7 @@ local dark = {
   ["@tag.attribute"]         = { fg = p.amber400 },
   ["@tag.delimiter"]         = { fg = p.beige500 },
 
-  -- Markup (new treesitter captures)
+  -- Markup (@markup.* captures, Neovim 0.10 and later)
   ["@markup.heading"]        = { fg = p.sage400, bold = true },
   ["@markup.italic"]         = { italic = true },
   ["@markup.strong"]         = { bold = true },
@@ -156,7 +156,7 @@ local light = {
   ["@module"]                = { fg = p.teal800 },
   ["@symbol"]                = { fg = p.sage700 },
 
-  -- Text / markup
+  -- Text / markup (@text.* captures, before Neovim 0.10)
   ["@text"]                  = { fg = p.beige950 },
   ["@text.strong"]           = { bold = true },
   ["@text.emphasis"]         = { italic = true },
@@ -177,7 +177,7 @@ local light = {
   ["@tag.attribute"]         = { fg = p.amber700 },
   ["@tag.delimiter"]         = { fg = p.beige900 },
 
-  -- Markup (new treesitter captures)
+  -- Markup (@markup.* captures, Neovim 0.10 and later)
   ["@markup.heading"]        = { fg = p.sage700, bold = true },
   ["@markup.italic"]         = { italic = true },
   ["@markup.strong"]         = { bold = true },

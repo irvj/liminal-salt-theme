@@ -1,5 +1,5 @@
 -- Liminal Salt Light — lualine theme
--- Colors from canonical theme: github.com/irvj/liminal-salt
+-- Colors from canonical theme: github.com/irvj/liminal-salt-theme
 
 local p = {
   accent  = "#506e58",

@@ -11,7 +11,7 @@ function buildAlacritty(mode) {
 	const a = theme.ansi[mode];
 
 	return `# Liminal Salt ${mode === "dark" ? "Dark" : "Light"} — Alacritty
-# https://github.com/irvj/liminal-salt
+# https://github.com/irvj/liminal-salt-theme
 
 [colors.primary]
 background = ${q(u.background)}

@@ -1,5 +1,5 @@
 -- Liminal Salt — canonical palette
--- Source: github.com/irvj/liminal-salt/src/theme.js
+-- Source: github.com/irvj/liminal-salt-theme/src/theme.js
 
 local M = {}
 

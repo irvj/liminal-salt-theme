@@ -11,7 +11,7 @@ function buildGhostty(mode) {
 
 	const lines = [
 		`# Liminal Salt ${mode === "dark" ? "Dark" : "Light"} — Ghostty`,
-		`# https://github.com/irvj/liminal-salt`,
+		`# https://github.com/irvj/liminal-salt-theme`,
 		``,
 		`background = ${h(u.background)}`,
 		`foreground = ${h(u.foreground)}`,

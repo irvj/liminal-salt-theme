@@ -9,7 +9,7 @@ function buildWezTerm(mode) {
 
 	// WezTerm color scheme uses a TOML format
 	return `# Liminal Salt ${isDark ? "Dark" : "Light"} — WezTerm
-# https://github.com/irvj/liminal-salt
+# https://github.com/irvj/liminal-salt-theme
 #
 # Install:
 #   Copy to ~/.config/wezterm/colors/
@@ -19,7 +19,7 @@ function buildWezTerm(mode) {
 [metadata]
 name = "Liminal Salt ${isDark ? "Dark" : "Light"}"
 author = "irvj"
-origin_url = "https://github.com/irvj/liminal-salt"
+origin_url = "https://github.com/irvj/liminal-salt-theme"
 
 [colors]
 background = "${u.background}"

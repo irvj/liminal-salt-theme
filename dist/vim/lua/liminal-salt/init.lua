@@ -1,8 +1,9 @@
 -- Liminal Salt — Neovim colorscheme
--- https://github.com/irvj/liminal-salt
+-- https://github.com/irvj/liminal-salt-theme
 
 local M = {}
 
+-- Apply the colorscheme in the given mode, "dark" (the default) or "light".
 function M.load(mode)
   mode = mode or "dark"
 
@@ -17,7 +18,6 @@ function M.load(mode)
   vim.o.background = mode
   vim.g.colors_name = "liminal-salt-" .. mode
 
-  -- Collect all highlight groups
   local groups = {}
   local modules = {
     require("liminal-salt.editor"),
@@ -34,12 +34,10 @@ function M.load(mode)
     end
   end
 
-  -- Apply all highlights
   for name, hl in pairs(groups) do
     vim.api.nvim_set_hl(0, name, hl)
   end
 
-  -- Apply terminal colors
   require("liminal-salt.terminal").apply(mode)
 end
 

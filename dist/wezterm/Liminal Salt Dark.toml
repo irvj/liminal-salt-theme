@@ -1,5 +1,5 @@
 # Liminal Salt Dark — WezTerm
-# https://github.com/irvj/liminal-salt
+# https://github.com/irvj/liminal-salt-theme
 #
 # Install:
 #   Copy to ~/.config/wezterm/colors/
@@ -9,7 +9,7 @@
 [metadata]
 name = "Liminal Salt Dark"
 author = "irvj"
-origin_url = "https://github.com/irvj/liminal-salt"
+origin_url = "https://github.com/irvj/liminal-salt-theme"
 
 [colors]
 background = "#1a1c1b"

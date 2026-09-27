@@ -8,7 +8,7 @@ function buildTmux(mode) {
 	const s = theme.syntax[mode];
 
 	return `# Liminal Salt ${isDark ? "Dark" : "Light"} — tmux
-# https://github.com/irvj/liminal-salt
+# https://github.com/irvj/liminal-salt-theme
 #
 # Usage: add to your tmux.conf:
 #   source-file ~/.config/tmux/liminal-salt-${mode}.conf

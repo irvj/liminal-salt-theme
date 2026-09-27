@@ -47,7 +47,7 @@ function buildPalette() {
 	}
 
 	return `-- Liminal Salt — canonical palette
--- Source: github.com/irvj/liminal-salt/src/theme.js
+-- Source: github.com/irvj/liminal-salt-theme/src/theme.js
 
 local M = {}
 
@@ -67,10 +67,11 @@ return M
 // ---------------------------------------------------------------------------
 function buildInit() {
 	return `-- Liminal Salt — Neovim colorscheme
--- https://github.com/irvj/liminal-salt
+-- https://github.com/irvj/liminal-salt-theme
 
 local M = {}
 
+-- Apply the colorscheme in the given mode, "dark" (the default) or "light".
 function M.load(mode)
   mode = mode or "dark"
 
@@ -85,7 +86,6 @@ function M.load(mode)
   vim.o.background = mode
   vim.g.colors_name = "liminal-salt-" .. mode
 
-  -- Collect all highlight groups
   local groups = {}
   local modules = {
     require("liminal-salt.editor"),
@@ -102,12 +102,10 @@ function M.load(mode)
     end
   end
 
-  -- Apply all highlights
   for name, hl in pairs(groups) do
     vim.api.nvim_set_hl(0, name, hl)
   end
 
-  -- Apply terminal colors
   require("liminal-salt.terminal").apply(mode)
 end
 
@@ -440,7 +438,7 @@ local dark = {
   ["@module"]                = { fg = p.${d.type} },
   ["@symbol"]                = { fg = p.${d.keyword} },
 
-  -- Text / markup
+  -- Text / markup (@text.* captures, before Neovim 0.10)
   ["@text"]                  = { fg = p.${d.variable} },
   ["@text.strong"]           = { bold = true },
   ["@text.emphasis"]         = { italic = true },
@@ -461,7 +459,7 @@ local dark = {
   ["@tag.attribute"]         = { fg = p.${d.attribute} },
   ["@tag.delimiter"]         = { fg = p.${d.punctuation} },
 
-  -- Markup (new treesitter captures)
+  -- Markup (@markup.* captures, Neovim 0.10 and later)
   ["@markup.heading"]        = { fg = p.${d.keyword}, bold = true },
   ["@markup.italic"]         = { italic = true },
   ["@markup.strong"]         = { bold = true },
@@ -532,7 +530,7 @@ local light = {
   ["@module"]                = { fg = p.${dl.type} },
   ["@symbol"]                = { fg = p.${dl.keyword} },
 
-  -- Text / markup
+  -- Text / markup (@text.* captures, before Neovim 0.10)
   ["@text"]                  = { fg = p.${dl.variable} },
   ["@text.strong"]           = { bold = true },
   ["@text.emphasis"]         = { italic = true },
@@ -553,7 +551,7 @@ local light = {
   ["@tag.attribute"]         = { fg = p.${dl.attribute} },
   ["@tag.delimiter"]         = { fg = p.${dl.punctuation} },
 
-  -- Markup (new treesitter captures)
+  -- Markup (@markup.* captures, Neovim 0.10 and later)
   ["@markup.heading"]        = { fg = p.${dl.keyword}, bold = true },
   ["@markup.italic"]         = { italic = true },
   ["@markup.strong"]         = { bold = true },
@@ -937,7 +935,7 @@ function buildLualine(mode) {
 	const bgSep = isDark ? prims.stone50 : prims.beige400;
 
 	return `-- Liminal Salt ${isDark ? "Dark" : "Light"} — lualine theme
--- Colors from canonical theme: github.com/irvj/liminal-salt
+-- Colors from canonical theme: github.com/irvj/liminal-salt-theme
 
 local p = {
   accent  = "${accent}",

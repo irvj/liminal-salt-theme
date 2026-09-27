@@ -136,14 +136,15 @@ dist/vim/
     └── liminal-salt-light.lua
 ```
 
-With lazy.nvim, set the colorscheme in your plugin spec:
+With lazy.nvim, point the spec at this repo and add `dist/vim` to the runtimepath, since the plugin lives in that subdirectory rather than at the repo root:
 
 ```lua
 {
-  "irvj/liminal-salt",
+  "irvj/liminal-salt-theme",
   lazy = false,
   priority = 1000,
-  config = function()
+  config = function(plugin)
+    vim.opt.rtp:append(plugin.dir .. "/dist/vim")
     vim.cmd("colorscheme liminal-salt-dark")
   end,
 }
